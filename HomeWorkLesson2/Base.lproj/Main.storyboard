@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HomeWorkLesson2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HmX-Ma-6Sa" customClass="InputView" customModule="HomeWorkLesson2" customModuleProvider="target">
+                                <rect key="frame" x="32" y="124" width="351" height="324"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QlA-wY-dUJ">
+                                        <rect key="frame" x="31" y="38" width="289" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="fdF-gb-O8t"/>
+                                        </constraints>
+                                        <state key="normal" title="Vector/SQRT"/>
+                                        <connections>
+                                            <action selector="SQRTButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UgR-N8-tx0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSE-LZ-pyc">
+                                        <rect key="frame" x="31" y="138" width="289" height="74"/>
+                                        <state key="normal" title="Reverse"/>
+                                        <connections>
+                                            <action selector="reverseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aU4-0x-SCS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="fSE-LZ-pyc" firstAttribute="top" secondItem="QlA-wY-dUJ" secondAttribute="bottom" constant="20" id="NyK-vL-3cn"/>
+                                    <constraint firstItem="QlA-wY-dUJ" firstAttribute="trailing" secondItem="fSE-LZ-pyc" secondAttribute="trailing" id="foW-hu-IwK"/>
+                                    <constraint firstItem="QlA-wY-dUJ" firstAttribute="leading" secondItem="HmX-Ma-6Sa" secondAttribute="leading" constant="31" id="i3B-Ve-l4j"/>
+                                    <constraint firstItem="QlA-wY-dUJ" firstAttribute="centerX" secondItem="HmX-Ma-6Sa" secondAttribute="centerX" id="jIc-o7-s9h"/>
+                                    <constraint firstItem="QlA-wY-dUJ" firstAttribute="leading" secondItem="fSE-LZ-pyc" secondAttribute="leading" id="kpm-ES-RsC"/>
+                                    <constraint firstAttribute="bottom" secondItem="fSE-LZ-pyc" secondAttribute="bottom" constant="112" id="qNJ-AD-wqq"/>
+                                    <constraint firstItem="QlA-wY-dUJ" firstAttribute="top" secondItem="HmX-Ma-6Sa" secondAttribute="top" constant="38" id="yFt-BJ-Qgn"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="math" destination="QlA-wY-dUJ" id="hxS-WL-CWb"/>
+                                    <outlet property="revers" destination="fSE-LZ-pyc" id="lPp-NY-nVl"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RCq-5y-Igq" customClass="OutputView" customModule="HomeWorkLesson2" customModuleProvider="target">
+                                <rect key="frame" x="32" y="490" width="351" height="244"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uW8-2I-Mht">
+                                        <rect key="frame" x="8" y="14" width="335" height="217"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="217" id="hzY-jN-t4S"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="uW8-2I-Mht" firstAttribute="trailing" secondItem="RCq-5y-Igq" secondAttribute="trailingMargin" id="MPE-Ok-TLR"/>
+                                    <constraint firstItem="uW8-2I-Mht" firstAttribute="top" secondItem="RCq-5y-Igq" secondAttribute="top" constant="14" id="UlQ-J0-JRz"/>
+                                    <constraint firstItem="uW8-2I-Mht" firstAttribute="leading" secondItem="RCq-5y-Igq" secondAttribute="leadingMargin" id="VRc-ql-81S"/>
+                                    <constraint firstItem="uW8-2I-Mht" firstAttribute="centerY" secondItem="RCq-5y-Igq" secondAttribute="centerY" constant="0.5" id="jEk-Bl-feu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HmX-Ma-6Sa" secondAttribute="trailing" constant="31" id="3uW-nF-qSV"/>
+                            <constraint firstItem="RCq-5y-Igq" firstAttribute="height" secondItem="HmX-Ma-6Sa" secondAttribute="height" constant="-80" id="5Cg-bh-teE"/>
+                            <constraint firstItem="HmX-Ma-6Sa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="5RL-d2-yMP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RCq-5y-Igq" secondAttribute="bottom" constant="128" id="CTP-nb-6lH"/>
+                            <constraint firstItem="HmX-Ma-6Sa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Q3y-jg-gQS"/>
+                            <constraint firstItem="HmX-Ma-6Sa" firstAttribute="leading" secondItem="RCq-5y-Igq" secondAttribute="leading" id="Yuy-ob-Azb"/>
+                            <constraint firstItem="RCq-5y-Igq" firstAttribute="top" secondItem="HmX-Ma-6Sa" secondAttribute="bottom" constant="42" id="gsV-FF-OVz"/>
+                            <constraint firstItem="HmX-Ma-6Sa" firstAttribute="trailing" secondItem="RCq-5y-Igq" secondAttribute="trailing" id="moj-Ve-eP6"/>
+                            <constraint firstItem="RCq-5y-Igq" firstAttribute="width" secondItem="HmX-Ma-6Sa" secondAttribute="width" id="qof-Md-nXi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="uW8-2I-Mht" id="mD8-zy-D93"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="133.25892857142856"/>
+        </scene>
+    </scenes>
+</document>
